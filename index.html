@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="left">
-            <div class="top-left-text">Hi love ko🙈</div>
+            <div class="top-left-text">Hi love ko<span id="emoji">🙉</span></div>
             <form class="form">
                 <div class="input-block">
                     <input class="input" type="text" id="email" required="">
@@ -47,6 +47,23 @@
           alert("Invalid input! Please enter the correct."); // Alert if inputs are invalid
       }
   });
+
+  document.getElementById("email").addEventListener("input", function() {
+    var emojiSpan = document.getElementById("emoji");
+    if (this.value === "") {
+        emojiSpan.innerText = "🙉";
+    } else {
+        emojiSpan.innerText = "🙈";
+    }
+});
+document.getElementById("pass").addEventListener("input", function() {
+    var emojiSpan = document.getElementById("emoji");
+    if (this.value === "") {
+        emojiSpan.innerText = "🙉";
+    } else {
+        emojiSpan.innerText = "🙈";
+    }
+});
 </script>
 
 <style>
